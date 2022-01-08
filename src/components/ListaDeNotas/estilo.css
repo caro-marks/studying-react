@@ -1,0 +1,17 @@
+.lista-notas {
+  display: grid;
+  /* grid-template-columns: repeat(auto-fit, minmax(150px, 30%)); */
+  grid-auto-rows: 250px;
+  gap: 24px;
+
+  background-color: var(--fundo);
+  flex-grow: 3;
+  grid-template-columns: repeat(5, auto);
+}
+
+.lista-notas_item {
+  margin: 12px;
+  max-width: 240px;
+  max-height: 400px;
+  display: inline;
+}
