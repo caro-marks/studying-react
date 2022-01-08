@@ -1,12 +1,13 @@
 .lista-notas {
   display: grid;
-  /* grid-template-columns: repeat(auto-fit, minmax(150px, 30%)); */
-  grid-auto-rows: 250px;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 23%));
   gap: 24px;
+  justify-content: center;
+  align-content: flex-start;
 
   background-color: var(--fundo);
   flex-grow: 3;
-  grid-template-columns: repeat(5, auto);
+  /* grid-template-columns: repeat(5, auto); */
 }
 
 .lista-notas_item {

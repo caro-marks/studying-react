@@ -6,10 +6,14 @@ import './assets/App.css'
 import './assets/index.css'
 
 class App extends Component {
+  _newNota(titulo, texto) {
+    console.log(titulo + texto)
+  }
+
   render() {
     return (
       <div className="conteudo">
-        <FormCadastro />
+        <FormCadastro createNota={this._newNota} />
         <ListaDeNotas />
       </div>
     )
