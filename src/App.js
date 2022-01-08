@@ -22,11 +22,23 @@ class App extends Component {
     this.setState(novoEstado)
   }
 
+  _destroyNota(indice) {
+    let listaNotas = this.state.notas
+    listaNotas.splice(indice, 1)
+    const novoEstado = {
+      notas: listaNotas,
+    }
+    this.setState(novoEstado)
+  }
+
   render() {
     return (
       <div className="conteudo">
         <FormCadastro createNota={this._newNota.bind(this)} />
-        <ListaDeNotas notas={this.state.notas} />
+        <ListaDeNotas
+          notas={this.state.notas}
+          destroyNota={this._destroyNota.bind(this)}
+        />
       </div>
     )
   }
