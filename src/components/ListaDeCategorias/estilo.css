@@ -1,0 +1,20 @@
+.listaCategorias {
+  display: grid;
+  grid-template-columns: auto 20%;
+  padding: 10px 20px;
+}
+
+.listaCategorias-ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50px, 15%));
+  grid-auto-rows: 20px;
+  justify-content: space-around;
+  justify-items: center;
+}
+
+.listaCategorias-li {
+  background-color: black;
+  color: white;
+  border-radius: 20%;
+  padding: 5% 10%;
+}
