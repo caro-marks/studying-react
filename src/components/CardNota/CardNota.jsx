@@ -17,6 +17,7 @@ class CardNota extends Component {
               {this.props.title}
             </h3>
             <DeleteSVG onClick={this.deletarNota.bind(this)}/>
+            <h4>{this.props.category}</h4>
           </header>
           <p className="card-nota_texto">
             {this.props.text}

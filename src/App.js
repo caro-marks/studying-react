@@ -15,8 +15,8 @@ class App extends Component {
     }
   }
 
-  _newNota(titulo, texto) {
-    const novaNota = { titulo, texto }
+  _newNota(titulo, texto, categoria) {
+    const novaNota = { titulo, texto, categoria }
     const novasNotas = [...this.state.notas, novaNota]
     const novoEstado = {
       ...this.state,
@@ -41,7 +41,10 @@ class App extends Component {
   render() {
     return (
       <div className="conteudo">
-        <FormCadastro createNota={this._newNota.bind(this)} />
+        <FormCadastro
+          categorias={this.state.categorias}
+          createNota={this._newNota.bind(this)}
+        />
         <main className="conteudo-principal">
           <ListaDeCategorias
             adicionarCategoria={this._adicionarCategoria.bind(this)}
