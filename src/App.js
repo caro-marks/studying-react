@@ -6,16 +6,19 @@ import './assets/App.css'
 import './assets/index.css'
 import ListaDeCategorias from './components/ListaDeCategorias'
 
+import Notas from './dados/Notas'
+
 class App extends Component {
   constructor() {
     super()
+    this.notas = new Notas()
     this.state = {
-      notas: [],
       categorias: [],
+      // notas: []
     }
   }
 
-  _newNota(titulo, texto, categoria) {
+  /* _newNota(titulo, texto, categoria) {
     const novaNota = { titulo, texto, categoria }
     const novasNotas = [...this.state.notas, novaNota]
     const novoEstado = {
@@ -30,7 +33,7 @@ class App extends Component {
     listaNotas.splice(indice, 1)
     const novoEstado = { ...this.state, notas: listaNotas }
     this.setState(novoEstado)
-  }
+  } */
 
   _adicionarCategoria(categoria) {
     const novasCategorias = [...this.state.categorias, categoria]
@@ -43,7 +46,7 @@ class App extends Component {
       <div className="conteudo">
         <FormCadastro
           categorias={this.state.categorias}
-          createNota={this._newNota.bind(this)}
+          createNota={this.notas.adicionarNota}
         />
         <main className="conteudo-principal">
           <ListaDeCategorias
@@ -51,8 +54,8 @@ class App extends Component {
             categorias={this.state.categorias}
           />
           <ListaDeNotas
-            notas={this.state.notas}
-            destroyNota={this._destroyNota.bind(this)}
+            notas={this.notas.notas}
+            destroyNota={this.notas.apagarNota}
           />
         </main>
       </div>

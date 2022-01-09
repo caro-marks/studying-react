@@ -4,7 +4,7 @@ import './estilo.css'
 class ListaDeCategorias extends Component{
 
   _handleEventoInput(evento){
-    if(evento.key == "Enter"){
+    if(evento.key === "Enter"){
       const valorCategoria = evento.target.value
       this.props.adicionarCategoria(valorCategoria)    
     }
