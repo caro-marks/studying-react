@@ -1,10 +1,10 @@
-.listaCategorias {
+.lista-categorias {
   display: grid;
   grid-template-columns: auto 20%;
   padding: 10px 20px;
 }
 
-.listaCategorias-ul {
+.lista-categorias_lista {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(50px, 15%));
   grid-auto-rows: 20px;
@@ -12,9 +12,13 @@
   justify-items: center;
 }
 
-.listaCategorias-li {
+.lista-categorias_item {
   background-color: black;
   color: white;
   border-radius: 20%;
   padding: 5% 10%;
+}
+
+.lista-categorias_input {
+  margin-right: 10px;
 }
